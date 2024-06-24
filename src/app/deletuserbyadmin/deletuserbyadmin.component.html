@@ -1,0 +1,11 @@
+<!-- <p>deletuserbyadmin works!</p> -->
+<div align="center">
+
+    <h2>DELETE USER</h2>
+    <h3 style="color: red;"> {{showmsg}}</h3>
+    <form (ngSubmit)="onSubmit()">
+        <input type="tel" name="registrationno" [(ngModel)]="registrationno" placeholder="enter registrationno...">
+        <br /><br />
+        <input type="submit" value="DELETE">
+    </form>
+</div>

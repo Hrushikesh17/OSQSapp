@@ -1,0 +1,26 @@
+<!-- <p>giveans works!</p> -->
+<div class="container">
+    <div class="form-container">
+        <h2>QUERY ANSWER SHEET</h2>
+        <b>{{showmsg}}</b>
+        <form #userform="ngForm" (ngSubmit)="onSubmit(userform)">
+            <label for="queryid">Query id:</label>
+            <input type="number" placeholder="query id" id="queryid" name="queryid" [(ngModel)]="ansobj.queryid">
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="input email" id="email" name="email" [(ngModel)]="ansobj.email"><br>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" [(ngModel)]="ansobj.subject">
+
+            <label for="ans">Write your answer:</label>
+            <textarea placeholder="Type your answer here" id="ans" name="ans" [(ngModel)]="ansobj.ans"></textarea><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" [(ngModel)]="ansobj.date"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,49 @@
+<!-- <p>userregistration works!</p> -->
+<div class="student-registration">
+    <div class="form-container">
+        <h2>STUDENT REGISTRATION</h2>
+        <!-- inter collation -->
+        <b>{{showmsg}}</b>
+        <!-- Form -->
+        <form #userform="ngForm" (ngSubmit)="onSubmit(userform)">
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" [(ngModel)]="uobj.fullname" placeholder="Enter your name"
+                required>
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" [(ngModel)]="uobj.email"
+                required>
+
+            <label for="branch">Branch:</label><br>
+            <select name="branch" id="branch" class="branch" [(ngModel)]="uobj.branch" placeholder="Select your branch">
+                <option value="cse" name="cse">COMPUTER SCIENCE</option>
+                <option value="it" name="'it">INFORMATION TECHNOLOGY</option>
+                <option value="mech" name="mech">MECHANICAL</option>
+                <option value="civil" name="civil">CIVIL</option>
+                <option value="electrical" name="electrical">ELECTRICAL</option>
+            </select>
+            <br>
+
+            <label for="rollno" class="rollno">Rollno:</label><br>
+            <input type="text" name="rollno" id="rollno" placeholder="Enter your roll number" [(ngModel)]="uobj.rollno"
+                required>
+
+            <label for="registrationno">Registration no:</label><br>
+            <input type="number" name="registrationno" id="registrationno" placeholder="Enter your registration number"
+                [(ngModel)]="uobj.registrationno" required>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password"
+                [(ngModel)]="uobj.password" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+            <!-- Reset Button -->
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

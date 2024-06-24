@@ -1,0 +1,43 @@
+<!-- <p>adminafterlogin works!</p> -->
+
+<header class="header">
+    <nav class="navbar">
+        <div class="container">
+            <!-- <h1 class="logo lg-heading text-light">bcet</h1> -->
+            <!-- <ul class="nav-items">
+                <li class="nav-item"><a href="/home" *ngIf="!islogIn()">home</a></li>
+                <li class="nav-item"><a href="/giveans" *ngIf="!islogIn()">give ans</a></li>
+                <li class="nav-item"><a href="/searchuser" *ngIf="!islogIn()">search</a></li>
+                <li class="nav-item"><a href="/viewallquery" *ngIf="!islogIn()">view all query</a></li>
+                <li class="nav-item"><a href="/adminviewalluser" *ngIf="!islogIn()">view all student</a></li>
+                <li class="nav-item"><a href="./about.html" *ngIf="!islogIn()">delet</a></li>
+
+                <li class="nav-item"><a href="#" (click)="logout()" *ngIf="islogIn()">logout</a></li>
+            </ul> -->
+            <ul class="nav-items">
+                <li class="nav-item"><a href="/home">home</a></li>
+                <li class="nav-item"><a href="/giveans">give ans</a></li>
+                <li class="nav-item"><a href="/searchuser">search</a></li>
+
+                <li class="nav-item">
+                    <a href="#">viewall</a>
+                    <ul>
+                        <li class="viewallquery"><a href="/viewallquery">view all query</a></li>
+                        <li><a href="/adminviewalluser">view all student</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a href="/deletuserbyadmin">delet</a></li>
+
+                <li class="nav-item"><a href="#" (click)="logout()" *ngIf="islogIn()">logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-content">
+        <h1 class="lg-heading text-light">college management</h1>
+        <p class="text-light">admin portal</p>
+        <!-- <a href="#explore-palces" class="btn btn-primary text-red md-heading">Explore places</a> -->
+    </div>
+</header>
+<app-footer></app-footer>

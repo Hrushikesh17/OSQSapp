@@ -1,0 +1,25 @@
+<div align="center" style="background-color: cadetblue;">
+
+    <h3 style="color: rgb(151, 19, 19);"> ALL QUERY DETAILS </h3>
+    <h3><a href="/giveans">ANSWER QUERY</a></h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>QUERY ID</th>
+                <th>SUBJECT</th>
+                <th>QUERY</th>
+                <th>EMAIL</th>
+                <th>DATE</th>
+            </tr>
+        </thead>
+
+        <tr *ngFor="let qobj of queryobjarr">
+            <td>{{qobj.queryid}}</td>
+            <td>{{qobj.subject}}</td>
+            <td>{{qobj.query}}</td>
+            <td>{{qobj.email}}</td>
+            <td>{{qobj.date}}</td>
+        </tr>
+    </table>
+</div>

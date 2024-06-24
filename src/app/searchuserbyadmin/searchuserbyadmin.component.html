@@ -1,0 +1,43 @@
+<div align="center">
+
+    <!-- <app-navbar></app-navbar> -->
+    <div class="search-container">
+        <div class="container">
+            <h2>SEARCH USER</h2>
+            <form #userform="ngForm" (ngSubmit)="onSubmit(userform)">
+                <h3 style="color: red;">{{showmsg}}</h3>
+                <label for="email">Enter email for search:</label>
+                <input type="email" placeholder="Enter email" name="email" [(ngModel)]="uobj.email">
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+    <br><br>
+
+
+
+    <div *ngIf="showtable">
+        <h3 style="color: rgb(151, 19, 19);"> --USER DETAILS-- </h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>BRANCH</th>
+                    <th>ROLL NUMBER</th>
+                    <th>REGISTRATION NUMBER</th>
+                </tr>
+            </thead>
+
+            <tr *ngFor="let uobj1 of studentobjarr">
+                <td>{{uobj1.fullname}}</td>
+                <td>{{uobj1.email}}</td>
+                <td>{{uobj1.branch}}</td>
+                <td>{{uobj1.rollno}}</td>
+                <td>{{uobj1.registrationno}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

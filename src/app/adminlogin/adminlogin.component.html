@@ -1,0 +1,31 @@
+<!-- <p>adminlogin works!</p> -->
+<script src="https://kit.fontawesome.com/25d9e105ad.js" crossorigin="anonymous"></script>
+<div class="adminloginmain">
+    <h1>ADMIN LOGIN</h1>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class=" headingsContainer">
+            <h3>Sign in</h3>
+            <p>Sign in with your username and password</p>
+        </div>
+
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="adminloginid">Username:</label>
+            <input type="text" placeholder="Enter Username" name="adminloginid" [(ngModel)]="adminloginid" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="adminpassword">Password:</label>
+            <input type="password" placeholder="Enter Password" name="adminpassword" [(ngModel)]="adminpassword"
+                required>
+
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+
+        </div>
+
+    </form>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,24 @@
+<div align="center" style="background-color: cadetblue;">
+
+    <h3 style="color: rgb(151, 19, 19);"> ALL USER DETAILS </h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>BRANCH</th>
+                <th>ROLL NUMBER</th>
+                <th>REGISTRATION NUMBER</th>
+            </tr>
+        </thead>
+
+        <tr *ngFor="let uobj of studentobjarr">
+            <td>{{uobj.fullname}}</td>
+            <td>{{uobj.email}}</td>
+            <td>{{uobj.branch}}</td>
+            <td>{{uobj.rollno}}</td>
+            <td>{{uobj.registrationno}}</td>
+        </tr>
+    </table>
+</div>

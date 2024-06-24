@@ -1,0 +1,27 @@
+<!-- <p>addquery works!</p> -->
+<div class="addquery">
+    <div class="form-container">
+        <h2>add query</h2>
+        <b>{{showmsg}}</b>
+        <form #userform="ngForm" (ngSubmit)="onSubmit(userform)">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" [(ngModel)]="qobj.subject"
+                required><br>
+
+            <label for="query">Query:</label>
+            <textarea placeholder="Write your query" id="query" name="query" [(ngModel)]="qobj.query"
+                required></textarea><br>
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="input your email" id="email" name="email" [(ngModel)]="qobj.email"
+                required><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" [(ngModel)]="qobj.date" required><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>
